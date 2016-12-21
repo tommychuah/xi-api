@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/invoi
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoices</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/style/style.css?v=2">
+    <link rel="stylesheet" href="/style/style.css?v=4">
 </head>
 <body>
     <div class="main">
@@ -39,9 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/invoi
                         <input type="Text" name="payer_email" value="tommychuah@gmail.com" /><br />
                         <input type="Text" name="description" value="Seafood dinner at Ritz Calton" /><br />
                         <input type="Text" name="amount" value="11234" /><br />
-                        <input type="submit" class="btn-style" name="submit" value="Create Invoice" />
+                        <input type="submit" class="btn-style" name="submit" value="Create Invoice" /><br /><br />
                     </form>
-                    <?php if($createInvoice): ?><br /><br />
+                    <?php if($createInvoice): ?>
                     <button onclick="window.open('<?php echo $createInvoice['invoice_url'] ?>')">Pay Now</button>
                     <button onclick="window.open('/invoices_callback/callback.txt')">Callback Data</button>
                     <div class="response"><?php print("<pre>".print_r($createInvoice,true)."</pre>"); ?></div>

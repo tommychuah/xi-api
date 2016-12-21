@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/index
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balances</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style.css?v=4">
 </head>
 <body>
     <div class="main">
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/index
                 <div class="container content_line"></div>
                 <div class="r_panel">
                     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" name="theForm" id="theForm" enctype="multipart/form-data">
-                        <input type="submit" class="btn-style" name="submit" value="Get Balance" />
+                        <input type="submit" class="btn-style" name="submit" value="Get Balance" /><br /><br />
                     </form>
                     <?php if($getBalance): ?> 
                     <p>Your balance is: <strong>IDR <?php echo number_format($getBalance['balance'],3); ?></strong></p>

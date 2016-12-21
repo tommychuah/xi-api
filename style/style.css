@@ -95,7 +95,6 @@ html, body {
 .sidebarul li a:hover {
     color: #446cb3;
 }
-
 ul.navi {
     width: 300px;
     float: left;
@@ -141,13 +140,14 @@ ul.navi {
 }
 div.response {
     width: 710px;
-    padding: 0 20px;
+    padding: 0;
     border: 1px solid #f4f4f4;
     background-color: #F7F7F7;
     margin: 20px 0;
 }
 div.response pre {
     font-family: 'Lato';
+    padding: 0 20px;
 }
 .btn-style, button {
     outline: none;
@@ -175,7 +175,37 @@ div.response pre {
     filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
 }
 
-
+@media only screen and (max-width: 768px) {
+    html, body {
+        background: none;
+        min-width: 100%;
+    }
+    .sidebar {
+        float: left;
+        width: 100%;
+        max-width: 100%;
+    }
+    .content {
+        float: left;
+        width: 100%;
+    }
+    div.response {
+        width: 100%;
+        overflow: auto;
+    }
+    .sidebarul {
+        padding: 40px 40px 0 40px;
+    }
+    .sidebarul li a {
+        font-size: 1.2em;
+    }
+    .r_panel {
+        padding: 20px 32px 0 32px;
+    }
+    .r_panel input[type=text] {
+        width: 100%;
+    }
+}
 
 
 

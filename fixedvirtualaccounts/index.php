@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/fixed
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixed Virtual Accounts</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/style/style.css?v=2">
+    <link rel="stylesheet" href="/style/style.css?v=4">
 </head>
 <body>
     <div class="main">
@@ -37,9 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/fixed
                     <input type="Text" name="external_id" value="tc_12345678901234567890" /><br />
                     <input type="Text" name="bank_code" value="BCA" /><br />
                     <input type="Text" name="name" value="Rika Sutanto" /><br />
-                    <input type="submit" class="btn-style" name="submit" value="Create fixed virtual account" />
+                    <input type="submit" class="btn-style" name="submit" value="Create fixed virtual account" /><br /><br />
                 </form>
-                <?php if($createAccount): ?><br /><br />
+                <?php if($createAccount): ?>
                 <button onclick="window.open('/fixedvirtualaccounts_callback/callback.txt')">Callback Data</button>
                 <div class="response"><?php print("<pre>".print_r($createAccount,true)."</pre>"); ?></div>
                 <?php endif; ?>

@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/disbu
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disbursements</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="/style/style.css?v=2">
+    <link rel="stylesheet" href="/style/style.css?v=4">
 </head>
 <body>
     <div class="main">
@@ -41,9 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $_SERVER["SCRIPT_NAME"] === "/disbu
                     <input type="Text" name="account_holder_name" value="Bob Jones" /><br />
                     <input type="Text" name="account_number" value="1231241231" /><br />
                     <input type="Text" name="amount" value="17000" /><br />
-                    <input type="submit" class="btn-style" name="submit" value="Create Disbursement" />
+                    <input type="submit" class="btn-style" name="submit" value="Create Disbursement" /><br /><br />
                 </form>
-                <?php if($createDisbursement): ?><br /><br />
+                <?php if($createDisbursement): ?>
                 <button onclick="window.open('/disbursements_callback/callback.txt')">Callback Data</button>
                 <div class="response"><?php print("<pre>".print_r($createDisbursement,true)."</pre>"); ?></div>
                 <?php endif; ?>
