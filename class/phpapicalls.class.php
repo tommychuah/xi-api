@@ -15,8 +15,8 @@ class phpApiCalls {
         curl_setopt($curl, CURLOPT_URL, $end_point);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         if(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on'){
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYHOST, 2);
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYPEER, true);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         }
         
         $response = curl_exec($curl);
@@ -48,8 +48,8 @@ class phpApiCalls {
         curl_setopt($curl, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); 
         if(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on'){
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYHOST, 2);
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYPEER, true);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         }
 
         $response = curl_exec($curl);
@@ -80,8 +80,8 @@ class phpApiCalls {
         curl_setopt($curl, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         if(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on'){
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYHOST, 2);
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYPEER, true);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         }
 
         $response = curl_exec($curl);
@@ -114,8 +114,8 @@ class phpApiCalls {
         curl_setopt($curl, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         if(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) === 'on'){
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYHOST, 2);
-            curl_setopt($auth_curl, CURLOPT_SSL_VERIFYPEER, true);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         }
 
         $response = curl_exec($curl);
